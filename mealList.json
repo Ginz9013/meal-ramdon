@@ -1,0 +1,62 @@
+[
+    {
+        "name": "食在一方",
+        "meal": ["breakfast", "lunch"],
+        "type": ["brunch"]
+    },
+    {
+        "name": "日十",
+        "meal": ["breakfast", "lunch"],
+        "type": ["brunch"]
+    },
+    {
+        "name": "鹽行站",
+        "meal": ["dinner"],
+        "type": ["buffet"]
+    },
+    {
+        "name": "鍋燒麵",
+        "meal": ["lunch", "dinner"],
+        "type": ["noodle"]
+    },
+    {
+        "name": "炒飯",
+        "meal": ["lunch", "dinner"],
+        "type": ["rice"]
+    },
+    {
+        "name": "八方雲集",
+        "meal": ["lunch", "dinner"],
+        "type": ["others"]
+    },
+    {
+        "name": "火鍋",
+        "meal": ["lunch", "dinner"],
+        "type": ["others"]
+    },
+    {
+        "name": "韓式料理",
+        "meal": ["lunch", "dinner"],
+        "type": ["rice", "noodle"]
+    },
+    {
+        "name": "小飯糰大飯糰",
+        "meal": ["lunch"],
+        "type": ["rice"]
+    },
+    {
+        "name": "後校門滷肉飯",
+        "meal": ["lunch"],
+        "type": ["rice", "noodle"]
+    },
+    {
+        "name": "魚耶",
+        "meal": ["lunch"],
+        "type": ["rice", "noodle"]
+    },
+    {
+        "name": "吳家鴨香飯",
+        "meal": ["lunch", "dinner"],
+        "type": ["rice", "noodle"]
+    }
+]

@@ -8,6 +8,8 @@ const noodle = document.querySelector("#noodle");
 const buffet = document.querySelector("#buffet");
 const others = document.querySelector("#others");
 
+const checkList = [brunch, rice, noodle, buffet, others];
+
 //Button
 const rollBtn = document.querySelector("#roll");
 
@@ -29,14 +31,38 @@ fetch('mealList.json')
     console.error(error); // 處理錯誤
 });
 
+//Check default
+function checkDefault() {
+  for(let i = 0 ; i < checkList.length ; i++) {
+    if(checkList[i].checked) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
 
 // Filter
 function filter() {
   mealList = [...SourceData];
 
-  mealList = mealList.filter(item => item.meal.includes(meal.value))
+  // mealList = mealList.filter(item => item.meal.includes(meal.value))
 
-  console.log(mealList);
+  // checkDefault
+  if(checkDefault() === true) {
+    console.log(mealList);
+    return;
+  }
+
+  //filter
+  // mealList.forEach(i => {
+  //   if (!i.checked) {
+  //     mealList = mealList.filter(item => !(item.type.includes(i)))
+  //   }
+  // })
+  
+
 
   if (!brunch.checked) {
     mealList = mealList.filter(item => !(item.type.includes("brunch")))
@@ -44,6 +70,7 @@ function filter() {
 
   if (!rice.checked) {
     mealList = mealList.filter(item => !(item.type.includes("rice")))
+    console.log(mealList);
   }
 
   if (!noodle.checked) {
@@ -51,18 +78,25 @@ function filter() {
   }
 
   if (!buffet.checked) {
-    mealList = mealList.filter(item => !(item.type.includes("buffet")))
+    mealList = mealList.filter(item => !(item.type.includes("buffet")));
   }
 
   if (!others.checked) {
-    mealList = mealList.filter(item => !(item.type.includes("others")))
+    mealList = mealList.filter(item => !(item.type.includes("others")));
   }
+
+  console.log(mealList)
 }
 
 
 // Meal Raondom
 function ramdonMeal() {
-  const random = Math.floor(Math.random() * mealList.length); 
+  const random = Math.floor(Math.random() * mealList.length);
+  if(mealList.length === 0) {
+    //Render
+    order.innerText = "吃土";
+    return;
+  }
   const orderMeal = mealList[random].name;
   console.log(orderMeal);
 
@@ -75,7 +109,6 @@ function ramdonMeal() {
 
 // Roll
 rollBtn.addEventListener("click", () => {
-
   filter();
   ramdonMeal();
 });

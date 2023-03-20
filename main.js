@@ -2,11 +2,11 @@
 const meal = document.querySelector("#meal");
 
 // 勾選的類別
-const isBrunch = document.querySelector("#brunch").checked;
-const isRice = document.querySelector("#rice").checked;
-const isNoodle = document.querySelector("#noodle").checked;
-const isBuffet = document.querySelector("#buffet").checked;
-const isOthers = document.querySelector("#others").checked;
+const brunch = document.querySelector("#brunch");
+const rice = document.querySelector("#rice");
+const noodle = document.querySelector("#noodle");
+const buffet = document.querySelector("#buffet");
+const others = document.querySelector("#others");
 
 //Button
 const rollBtn = document.querySelector("#roll");
@@ -14,17 +14,50 @@ const rollBtn = document.querySelector("#roll");
 // 顯示結果
 const order = document.querySelector("#order");
 
+// SourceData
+let SourceData = [];
 
+// filterList
 let mealList = [];
 
 fetch('mealList.json')
   .then(response => response.json())
   .then(data => {
-    mealList = [...data];
+    SourceData = [...data];
   })
   .catch(error => {
     console.error(error); // 處理錯誤
 });
+
+
+// Filter
+function filter() {
+  mealList = [...SourceData];
+
+  mealList = mealList.filter(item => item.meal.includes(meal.value))
+
+  console.log(mealList);
+
+  if (!brunch.checked) {
+    mealList = mealList.filter(item => !(item.type.includes("brunch")))
+  }
+
+  if (!rice.checked) {
+    mealList = mealList.filter(item => !(item.type.includes("rice")))
+  }
+
+  if (!noodle.checked) {
+    mealList = mealList.filter(item => !(item.type.includes("noodle")))
+  }
+
+  if (!buffet.checked) {
+    mealList = mealList.filter(item => !(item.type.includes("buffet")))
+  }
+
+  if (!others.checked) {
+    mealList = mealList.filter(item => !(item.type.includes("others")))
+  }
+}
 
 
 // Meal Raondom
@@ -39,4 +72,10 @@ function ramdonMeal() {
 
 
 // Event Litsener
-rollBtn.addEventListener("click", () => ramdonMeal());
+
+// Roll
+rollBtn.addEventListener("click", () => {
+
+  filter();
+  ramdonMeal();
+});

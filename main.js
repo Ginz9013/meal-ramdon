@@ -13,6 +13,9 @@ const checkList = [brunch, rice, noodle, buffet, others];
 //Button
 const rollBtn = document.querySelector("#roll");
 
+//Spinner
+const loadingDiv = document.getElementById('loading');
+
 // 顯示結果
 const order = document.querySelector("#order");
 
@@ -86,10 +89,25 @@ function ramdonMeal() {
 }
 
 
-// Event Litsener
+// Spinner function
+function showSpinner() {
+  loadingDiv.style.visibility = 'visible';
+}
 
+function hideSpinner() {
+  loadingDiv.style.visibility = 'hidden';
+}
+
+
+// Event Litsener
 // Roll
 rollBtn.addEventListener("click", () => {
-  filter();
-  ramdonMeal();
+
+  showSpinner();
+
+  setTimeout(() => {
+    filter();
+    ramdonMeal();
+    hideSpinner();
+  }, 1000)
 });

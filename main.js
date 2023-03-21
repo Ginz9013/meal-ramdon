@@ -109,5 +109,5 @@ rollBtn.addEventListener("click", () => {
     filter();
     ramdonMeal();
     hideSpinner();
-  }, 1000)
+  }, 500)
 });

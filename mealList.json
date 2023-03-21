@@ -11,7 +11,7 @@
     },
     {
         "name": "鹽行站",
-        "category": ["buffet"],
+        "category": ["buffet", "rice"],
         "filter": false
     },
     {
@@ -51,7 +51,7 @@
     },
     {
         "name": "魚耶",
-        "category": ["rice", "noodle"],
+        "category": ["brunch", "rice", "noodle"],
         "filter": false
     },
     {

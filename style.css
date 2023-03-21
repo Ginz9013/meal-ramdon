@@ -42,7 +42,7 @@ h2 {
     padding: 0.5rem 1.5rem;
     margin-top: 1rem;
     cursor: pointer;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
 }
 
 .roll:hover {

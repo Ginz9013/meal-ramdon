@@ -1,62 +1,62 @@
 [
     {
         "name": "食在一方",
-        "meal": ["breakfast", "lunch"],
-        "type": ["brunch"]
+        "category": ["brunch"],
+        "filter": false
     },
     {
         "name": "日十",
-        "meal": ["breakfast", "lunch"],
-        "type": ["brunch"]
+        "category": ["brunch"],
+        "filter": false
     },
     {
         "name": "鹽行站",
-        "meal": ["dinner"],
-        "type": ["buffet"]
+        "category": ["buffet"],
+        "filter": false
     },
     {
         "name": "鍋燒麵",
-        "meal": ["lunch", "dinner"],
-        "type": ["noodle"]
+        "category": ["noodle"],
+        "filter": false
     },
     {
         "name": "炒飯",
-        "meal": ["lunch", "dinner"],
-        "type": ["rice"]
+        "category": ["rice"],
+        "filter": false
     },
     {
         "name": "八方雲集",
-        "meal": ["lunch", "dinner"],
-        "type": ["others"]
+        "category": ["others"],
+        "filter": false
     },
     {
         "name": "火鍋",
-        "meal": ["lunch", "dinner"],
-        "type": ["others"]
+        "category": ["others"],
+        "filter": false
     },
     {
         "name": "韓式料理",
-        "meal": ["lunch", "dinner"],
-        "type": ["rice", "noodle"]
+        "category": ["rice", "noodle"],
+        "filter": false
     },
     {
         "name": "小飯糰大飯糰",
-        "meal": ["lunch"],
-        "type": ["rice"]
+        "category": ["rice"],
+        "filter": false
     },
     {
         "name": "後校門滷肉飯",
-        "meal": ["lunch"],
-        "type": ["rice", "noodle"]
+        "category": ["rice", "noodle"],
+        "filter": false
     },
     {
         "name": "魚耶",
-        "meal": ["lunch"],
-        "type": ["rice", "noodle"]
+        "category": ["rice", "noodle"],
+        "filter": false
     },
     {
         "name": "吳家鴨香飯",
-        "meal": ["lunch", "dinner"],
-        "type": ["rice", "noodle"]
+        "category": ["rice", "noodle"],
+        "filter": false
     }
 ]

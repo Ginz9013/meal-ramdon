@@ -9,8 +9,14 @@ body {
     margin: 0;
 } 
 
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 h2 {
-    margin: 3rem 0 1rem;
+    margin: 2rem 0 1rem;
 }
 
 .mealList {
@@ -23,8 +29,8 @@ h2 {
     display: flex;
 }
 
-.mealType div{
-    margin-right: 1rem;
+.mealType > div{
+    margin-right: 1.5rem;
 }
 
 .roll {
@@ -35,6 +41,7 @@ h2 {
     padding: 0.5rem 1.5rem;
     margin-top: 1rem;
     cursor: pointer;
+    margin-bottom: 2rem;
 }
 
 .roll:hover {

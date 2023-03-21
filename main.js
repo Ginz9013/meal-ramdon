@@ -22,6 +22,8 @@ let SourceData = [];
 // filterList
 let mealList = [];
 
+
+
 fetch('mealList.json')
   .then(response => response.json())
   .then(data => {
@@ -45,47 +47,26 @@ function checkDefault() {
 
 // Filter
 function filter() {
-  mealList = [...SourceData];
+  // Reset data
+  mealList = JSON.parse(JSON.stringify(SourceData));
 
-  // mealList = mealList.filter(item => item.meal.includes(meal.value))
-
-  // checkDefault
-  if(checkDefault() === true) {
-    console.log(mealList);
+  // Chech Default
+  if(checkDefault()) {
     return;
   }
 
-  //filter
-  // mealList.forEach(i => {
-  //   if (!i.checked) {
-  //     mealList = mealList.filter(item => !(item.type.includes(i)))
-  //   }
-  // })
-  
+  // filter category
+  checkList.forEach(i => {
+    if (i.checked) {
+      mealList.forEach(m => {
+        if(m.category.includes(i.value)) {
+          m.filter = true;
+        }
+      })
+    }
+  })
 
-
-  if (!brunch.checked) {
-    mealList = mealList.filter(item => !(item.type.includes("brunch")))
-  }
-
-  if (!rice.checked) {
-    mealList = mealList.filter(item => !(item.type.includes("rice")))
-    console.log(mealList);
-  }
-
-  if (!noodle.checked) {
-    mealList = mealList.filter(item => !(item.type.includes("noodle")))
-  }
-
-  if (!buffet.checked) {
-    mealList = mealList.filter(item => !(item.type.includes("buffet")));
-  }
-
-  if (!others.checked) {
-    mealList = mealList.filter(item => !(item.type.includes("others")));
-  }
-
-  console.log(mealList)
+  mealList = mealList.filter(i => i.filter);
 }
 
 

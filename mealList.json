@@ -15,7 +15,7 @@
         "filter": false
     },
     {
-        "name": "鍋燒麵",
+        "name": "鍋燒意麵",
         "category": ["noodle"],
         "filter": false
     },
@@ -57,6 +57,41 @@
     {
         "name": "吳家鴨香飯",
         "category": ["rice", "noodle"],
+        "filter": false
+    },
+    {
+        "name": "施家雞肉飯",
+        "category": ["rice"],
+        "filter": false
+    },
+    {
+        "name": "黑盤",
+        "category": ["rice", "noodle"],
+        "filter": false
+    },
+    {
+        "name": "神武拉麵",
+        "category": ["noodle"],
+        "filter": false
+    },
+    {
+        "name": "森井丼飯",
+        "category": ["rice"],
+        "filter": false
+    },
+    {
+        "name": "雙醬咖哩",
+        "category": ["rice"],
+        "filter": false
+    },
+    {
+        "name": "麺や青鈴",
+        "category": ["noodle"],
+        "filter": false
+    },
+    {
+        "name": "金拱門",
+        "category": ["noodle", "rice"],
         "filter": false
     }
 ]
